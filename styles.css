@@ -21,7 +21,8 @@ header{
 
 h2{
     text-align: center;
-    font-family: 'Lora', serif;;
+    font-family: 'Lora', serif;
+    color: yellow;
 }
 
 nav {
@@ -120,4 +121,30 @@ nav a:hover {
     top: 45%;
     right: 2%;
   }
+
+  .proyecto{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.proyecto-image{
+    display: flex;
+    justify-content: flex-end;
+    height: 40%;
+    width: 40%;
+    margin: 20px;
+    border: 0px;
+}
+
+
+.proyecto-info{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+}
 
