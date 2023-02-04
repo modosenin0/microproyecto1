@@ -148,3 +148,12 @@ nav a:hover {
     width: 500px;
 }
 
+.general{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.page-skills{
+
+}
