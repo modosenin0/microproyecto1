@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    background-color: white;
 }
 
 
@@ -74,17 +73,14 @@ nav a:hover {
   
 .slider {
     width: 100%;
-    max-width: 800px;
-    height: 350px;
+    height: 100vh;
     position: relative;
-    overflow: hidden;  /* <===  */
-
+    overflow: hidden;  
   }
   
   .slide {
     width: 100%;
-    max-width: 800px;
-    height: 350px;
+    height: 100%;
     position: absolute;
     transition: all 0.5s;
   }
@@ -122,19 +118,43 @@ nav a:hover {
     right: 2%;
   }
 
-  .proyecto{
+.proyecto1{
     display: flex;
     justify-content: space-between;
+    background-color:rgb(250, 147, 147);
+}
+
+.proyecto2{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(186, 149, 255);
+}
+
+.proyecto3{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(146, 247, 137);
 }
 
 
-.proyecto-image{
+.proyecto-image1{
     display: flex;
     justify-content: flex-end;
     height: 40%;
     width: 40%;
     margin: 20px;
     border: 0px;
+    margin-left: 10%;
+}
+
+.proyecto-image2{
+    display: flex;
+    justify-content: flex-end;
+    height: 40%;
+    width: 40%;
+    margin: 20px;
+    border: 0px;
+    margin-right: 10%;
 }
 
 
@@ -146,6 +166,7 @@ nav a:hover {
     margin: auto;
     height: 500px;
     width: 500px;
+    font-family: 'Hind Madurai', sans-serif;;
 }
 
 .general{
@@ -248,7 +269,7 @@ canvas{
     height:200px;
     border:1px solid #333;
     display:inline-block;
-    position:absolute;
+    position:relative;
   }
 
   #lgnd{

@@ -78,7 +78,7 @@ contact.addEventListener("click", function(){
   }
 })
 
-let barVals = [{lbl: "dog", val: 11},{lbl: "cat", val: 12},{lbl: "b", val: 6},{lbl: "cdgo", val: 8},{lbl: "pepe", val: 11}]; //json values
+let barVals = [{lbl: "Html", val: 11},{lbl: "Python", val: 12},{lbl: "Java", val: 6},{lbl: "CSS", val: 8},{lbl: "Javascript", val: 11}]; //json values
 const canv = document.querySelector("#canv"),
   ctx = canv.getContext("2d"),
   addVal = () => {
