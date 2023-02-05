@@ -78,35 +78,49 @@ contact.addEventListener("click", function(){
   }
 })
 
-const mat = document.querySelector(".mat-bars");
-let stringResult = "";
-
-const skills = {
-    "HTML": 40,
-    "CSS":20,
-    "JS": 60,
-    "Python": 65,
-    "Java": 30
-};
-
-function writeHTML() {
-  for (const key in skills) {
-      const stringStructure = ` 
-      <style>
-      #${key} {
-      width: ${skills[key]}%;
-      }
-      </style>
-      <div class='bar-and-name'>
-          <div class='bar-and-name'>
-              <h1 class='bar-name'>${key}</h1>
-                  <div class='graph-space'>
-                  <div id='${key}' class='graph'>${skills[key]}%</div>
-          </div>
-      </div>`;
-      stringResult += stringStructure;
+let barVals = [{lbl: "dog", val: 11},{lbl: "cat", val: 12},{lbl: "b", val: 6},{lbl: "cdgo", val: 8},{lbl: "pepe", val: 11}]; //json values
+const canv = document.querySelector("#canv"),
+  ctx = canv.getContext("2d"),
+  addVal = () => {
+    const theLbl = document.querySelector("#lbl").value,
+      theVal = document.querySelector("#val").value;
+    if(!theLbl || theVal === "") return false;
+    if (!!barVals.find(n => n.lbl == theLbl)) {
+      return alert("This item already in chart!");
+    }
+    barVals.push({
+      lbl: theLbl,
+      val: Number(theVal)
+    });
+    renderChart(); 
   };
-  mat.innerHTML = stringResult;
-};
 
-writeHTML();
+const renderChart = () => {
+  console.log(barVals);
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0,0,canv.width,canv.height)
+  if(!barVals.length) return false;
+  const rawVals = barVals.map(q => q.val),
+    min = Math.min(...rawVals)-1,
+    max = Math.max(...rawVals)+1,
+    barWid = canv.width/barVals.length;
+   console.log(barVals,min,max,barWid,rawVals);
+  let currX = 0,
+      lgndStuff = '<h3>Legend:</h3><hr><ul style="list-style:none">';
+  for(let i=0;i<barVals.length;i++){
+    let currHeight = Number(canv.height)*(barVals[i].val-min)/(max-min),
+        currHue = Math.floor(i*360/barVals.length);
+    ctx.fillStyle = `hsl(${currHue},100%,40%)`;
+    ctx.fillRect(currX,canv.height-currHeight,barWid,currHeight);
+    ctx.fillRect(0,canv.height,5,5)
+    currX= Math.floor(currX+barWid);
+    lgndStuff+=`<li><div class='lbl' style='background:${ctx.fillStyle}'></div>&nbsp;${barVals[i].lbl} &nbsp;</li>`
+  }
+  lgndStuff+='</ul>'
+  document.querySelector('#lgnd').innerHTML = lgndStuff
+};
+const removeVal=(l) =>{
+  barVals = barVals.filter(q=>q.lbl!=l);
+  renderChart();
+}
+renderChart();
