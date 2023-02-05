@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-
+    background-color: #95b8f6;
 }
 
 
@@ -150,10 +150,94 @@ nav a:hover {
 
 .general{
     display: flex;
-    justify-content: space-between;
-    justify-content: center;
 }
 
 .page-skills{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.page-contact{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    flex-direction: column;
+    margin: 40px;
 
 }
+
+.contact-name{
+    grid-area: name;
+}
+
+.contact-social{
+    grid-area: social;
+}
+
+.contact-email{
+    grid-area: email;
+}
+
+.contact-myemail{
+    grid-area: myemail;
+}
+
+.contact-message{
+    grid-area: message;
+}
+
+.contact-number{
+    grid-area: number;
+}
+
+.contact-boton{
+    grid-area: boton;
+    width: 100px;
+}
+
+.contact-location{
+    grid-area: location;
+}
+
+.contact{
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas:
+    "name location"
+    "email myemail"
+    "message number" 
+    "boton social";
+}
+
+.example-group {
+    position: relative;
+    display: inline-block;
+    
+  }
+
+.example-input {
+    border-color: crimson;
+    background-color: #95b8f6;
+    padding: 8px;
+    border-radius: 16px;
+    border: 2px #885a2d solid;
+    width: 300px;
+    text-indent: 18px;
+    font-size: 18px;
+}
+
+.input-label {
+    background-color: #95b8f6;
+    color: crimson;
+    font-size: 11px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;
+}
+
+.short-input {
+    max-width: 200px;
+  }
