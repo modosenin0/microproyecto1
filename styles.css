@@ -2,30 +2,53 @@
     box-sizing: border-box;
 }
 
+.nombre-titulo{
+    background-color: #E9C46A;
+    font-family: 'Hind Madurai Bold', sans-serif;
+    border-radius: 40px;
+}
+
+.nombre-about{
+    background-color: #E76F51;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+    color:white;
+}
 
 html{
     scroll-behavior: smooth;
 }
 
+.line{
+    height: 2px;
+    width: 100%;
+    justify-content: center;
+    background-color: #E9C46A;
+    justify-self: center;
+}
+
 header{
     text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 10px;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
-    background-color: #95b8f6;
+    background-color: #E76F51;
     margin: 0px;
-    color: black;
-    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
 }
 
 h2{
     text-align: center;
-    font-family: 'Lora', serif;
-    color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+    color: white;
+    background-color:#264653;
+    margin: 0px;
+    border: 0px;
+    padding: 30px;
 }
 
 nav {
-    background-color: #95b8f6;
+    background-color: #E76F51;
     color: white;
     width: 100%;
     justify-content: center;
@@ -45,7 +68,7 @@ nav li {
 }
 
 nav a {
-    color: black;
+    color: white;
     font-family: 'Lora', serif;
     font-size: large;
     text-decoration: none;
@@ -121,21 +144,39 @@ nav a:hover {
 .proyecto1{
     display: flex;
     justify-content: space-between;
-    background-color:rgb(250, 147, 147);
+    background-color: #2A9D8F;
+    color: #E9C46A;
+}
+
+.proyecto1-titulo{
+    color: #264653;
 }
 
 .proyecto2{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(186, 149, 255);
+    background-color: #F4A261;
+    color:white;
 }
 
 .proyecto3{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(146, 247, 137);
+    background-color: #2A9D8F;
+    color: #E9C46A;
 }
 
+.nombre-color{
+    background-color: #E76F51;
+    font-family: 'Hind Madurai', sans-serif;
+    border-radius: 40px;
+}
+
+.objetivo-color{
+    background-color: #E9C46A;
+    font-family: 'Hind Madurai', sans-serif;
+    border-radius: 40px;
+}
 
 .proyecto-image1{
     display: flex;
@@ -166,27 +207,31 @@ nav a:hover {
     margin: auto;
     height: 500px;
     width: 500px;
-    font-family: 'Hind Madurai', sans-serif;;
+    font-family: 'Hind Madurai', sans-serif;
 }
 
 .general{
     display: flex;
+    background-color: #2A9D8F;
 }
 
 .page-skills{
     display: flex;
+    align-items: center;
     justify-content: center;
     width: 50%;
     flex-direction: column;
+    background-color: #F4A261;
 }
 
 .page-contact{
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 40%;
     flex-direction: column;
     margin: 40px;
-
+    border-radius: 40px;
+    color: white;
 }
 
 .contact-name{
@@ -195,14 +240,21 @@ nav a:hover {
 
 .contact-social{
     grid-area: social;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .contact-email{
     grid-area: email;
+    
 }
 
 .contact-myemail{
     grid-area: myemail;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .contact-message{
@@ -211,22 +263,34 @@ nav a:hover {
 
 .contact-number{
     grid-area: number;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .contact-boton{
     grid-area: boton;
     width: 100px;
+    background-color: #E9C46A;
+    border-radius: 16px;
+    border-color: white;
+    color:#264653;
 }
 
 .contact-location{
     grid-area: location;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .contact{
     display: grid;
     column-gap: 20px;
     row-gap: 20px;
+    font-family: 'Hind Madurai', sans-serif;
     grid-template-areas:
+    ". ."
     "name location"
     "email myemail"
     "message number" 
@@ -240,24 +304,25 @@ nav a:hover {
   }
 
 .example-input {
-    border-color: crimson;
-    background-color: #95b8f6;
+    border-color: #E9C46A;
+    background-color: #2A9D8F;
     padding: 8px;
     border-radius: 16px;
-    border: 2px #885a2d solid;
+    border: 2px #E9C46A solid;
     width: 300px;
     text-indent: 18px;
     font-size: 18px;
 }
 
 .input-label {
-    background-color: #95b8f6;
-    color: crimson;
+    background-color: #2A9D8F;
+    color: #E9C46A;
     font-size: 11px;
     position: absolute;
     left: 25px;
     top: -7px;
     padding: 0 2px;
+    
 }
 
 .short-input {
@@ -265,7 +330,7 @@ nav a:hover {
   }
 
 canvas{
-    width: 350px;
+    width: 60%;
     height:200px;
     border:1px solid #333;
     display:inline-block;
@@ -273,18 +338,41 @@ canvas{
   }
 
   #lgnd{
-    width:200px;
+    width:30%;
     height:200px;
-    border:1px solid #000;
+    border:2px solid white;
     display:inline-block;
-    left:515px;
-    position:absolute;
+    position:relative;
+    font-family: 'Hind Madurai', sans-serif;
+    color: white;
   }
+
 .lbl{
     width:10px;
     display:inline-block;
     height:10px;
+    font-family: 'Hind Madurai', sans-serif;
 }
 
+.division{
+    background-color: #264653;
+}   
+
+.skill-nombre{
+    border-radius: 40px;
+    width: 300px;
+    background-color: #E76F51;
+}
+
+.contact-nombre{
+    border-radius: 40px;
+    width: 300px;
+    background-color:#264653;
+}
     
-    
+.skills-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+
+}
