@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    background-color: #95b8f6;
+    background-color: white;
 }
 
 
@@ -156,6 +156,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     width: 50%;
+    flex-direction: column;
 }
 
 .page-contact{
@@ -241,3 +242,28 @@ nav a:hover {
 .short-input {
     max-width: 200px;
   }
+
+canvas{
+    width: 350px;
+    height:200px;
+    border:1px solid #333;
+    display:inline-block;
+    position:absolute;
+  }
+
+  #lgnd{
+    width:200px;
+    height:200px;
+    border:1px solid #000;
+    display:inline-block;
+    left:515px;
+    position:absolute;
+  }
+.lbl{
+    width:10px;
+    display:inline-block;
+    height:10px;
+}
+
+    
+    
